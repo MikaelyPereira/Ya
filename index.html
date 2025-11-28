@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Feliz vida</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			background-image: url('IMG-20250612-WA0096.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		
+		#galeria {
+			display: none;
+		}
+		
+		#videos {
+			display: none;
+		}
+		
+		#mensagem {
+			display: none;
+			white-space: pre-wrap;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+		
+		img {
+			width: 30%;
+			height: auto;
+			margin: 10px;
+		}
+		
+		video {
+			width: 50%;
+			height: auto;
+			margin: 20px;
+		}
+		    audio {
+      display: none;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <audio id="musica">
+    <source src="CRIANÇA.MP3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+  
+  <button onclick="document.getElementById('musica').play()">Clique aqui para ouvir a música</button>
+	</style>
+</head>
+<body>
+	<h1>Feliz 27/11</h1>
+	<button id="botao-galeria">Ver Fotos</button>
+	<div id="galeria">
+		<img src="IMG-20251113-WA0055.jpg" alt="Foto 1">
+		<img src="IMG-20251127-WA0015.jpg" alt="Foto 2">
+		<img src="IMG-20251127-WA0016.jpg" alt="Foto 3">
+		<img src="IMG-20251127-WA0017.jpg" alt="Foto 4">
+		<img src="IMG-20251127-WA0018.jpg" alt="Foto 5">
+	</div>
+	
+	<button id="botao-videos">Ver Vídeo</button>
+	<div id="videos">
+		<h2>Vídeo 1</h2>
+		<video controls>
+			<source src="Vídeo do WhatsApp de 2025-11-27 à(s) 22.24.04_91d90769.mp4" type="video/mp4">
+			Seu navegador não suporta o elemento de vídeo.
+		</video>
+	</div>
+	
+	<button id="botao-mensagem">Ler Mensagem</button>
+	<div id="mensagem">
+		<!-- A mensagem será carregada aqui -->
+         
+	</div>
+	
+	<script>
+		const botaoGaleria = document.getElementById("botao-galeria");
+		const galeria = document.getElementById("galeria");
+		
+		botaoGaleria.addEventListener("click", () => {
+			if (galeria.style.display === "none") {
+				galeria.style.display = "block";
+				botaoGaleria.textContent = "Ocultar Fotos";
+			} else {
+				galeria.style.display = "none";
+				botaoGaleria.textContent = "Ver Fotos";
+			}
+		});
+		
+		const botaoVideos = document.getElementById("botao-videos");
+		const videos = document.getElementById("videos");
+		
+		botaoVideos.addEventListener("click", () => {
+			if (videos.style.display === "none") {
+				videos.style.display = "block";
+				botaoVideos.textContent = "Ocultar Vídeos";
+			} else {
+				videos.style.display = "none";
+				botaoVideos.textContent = "Ver Vídeos";
+			}
+		});
+		
+		const botaoMensagem = document.getElementById("botao-mensagem");
+		const mensagem = document.getElementById("mensagem");
+		
+		botaoMensagem.addEventListener("click", () => {
+			if (mensagem.style.display === "none") {
+				mensagem.style.display = "block";
+				mensagem.innerText = "Meio tarde? Talvez... Achou mesmo que meu feliz aniversário pra ti seria uma figurinha te parabenizando? Cria vergonha na cara se pensou isso de mim né, tá ficando velhinha mesmo hein, 21 anos batendo na porta o que dizer para esse dia, acho que para esse dia eu tenho somente agradecer por sua amizade por seu companheirismo por ser essa menina incrível e inteligente que já passou por tanta coisa, hoje é o dia que você nasceu, mas entre nós já teve outros dias em que você teve que acordar de manhã e renascer, assim como uma fênix você renasceu e hoje você tá aqui com duas casas na idade só que agora não é 18, nem 19, nem 20 são 21 anos nas costas pra quem um dia nem pensou que chegaria a essa idade, a você minha grande Fênix eu desejo o melhor que a vida pode nos servir, a você eu desejo prosperidade, a você eu desejo alegria e desejo que você encontre aquilo que você realmente busca, a você eu desejo muitos anos de vida, a você eu desejo uma longa jornada, você pode não estar perto, mas está em meu peito em meu coração porque quando eu precisei você esteve lá por mim e eu espero estar contigo quando você precisar também eu te amo Adrya, te amo como amiga e te amo como uma irmã, uma irmã a qual eu nunca tive, tua risada contagia, tu conversa me cativa, teu abraço me conforta, ter você presente na minha vida, traz ao meu nobre coração alegria, por isso novamente desejo a tu, feliz aniversário!!!"
+				botaoMensagem.textContent = "Ocultar Mensagem";
+			} else {
+				mensagem.style.display = "none";
+				botaoMensagem.textContent = "Ler Mensagem";
+			}
+		});
+	</script>
+</body>
+</html>
